@@ -1,0 +1,272 @@
+html {
+    font-size: 62.5%;
+}
+body {
+    font-family: poppins;
+    margin: 0;
+}
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav {
+    margin: 4em;
+
+}
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 4.1rem;
+    margin: 0;
+}
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.6rem;
+    position: relative;
+    font-weight: 600;
+}
+
+nav ul li a.active:before {
+    position: absolute;
+    content: "";
+    width: 35%;
+    height: 1px;
+    border-bottom: 2px solid black;
+    bottom: -6px;
+}
+.left-col h1 {
+    font-family: Playfair Display;
+    font-size: 5.2rem;
+    margin: 0;
+}
+.left-col p {
+    font-family: poppins;
+    font-size: 1.8rem;
+}
+main {
+    display: flex;
+    gap: 4em;
+    margin-top: 11em;
+}
+.left-col {
+    width: 45%;
+}
+
+.right-col {
+    flex-grow: 1;
+
+}
+
+.cta-btns, .secondary-cta {
+    display: flex;
+    gap: 2rem;    
+}
+
+.primary-cta {
+    font-weight: bold;
+    color: black;
+    background-color: #F1E2D1;
+    font-size: 1.8rem;
+    text-decoration: none;
+    border-radius: 1.9em;
+    padding: 1em 2em;
+    text-align: center;
+    transition: transform 800ms;
+}
+
+.secondary-cta {
+    font-size: 1.8rem;
+    text-decoration: none;
+    color: black;
+    display: block;
+    padding: 1em 0;
+    align-items: center;
+}
+
+.secondary-cta svg {
+    width: 20px;
+    transition: transform 0.3s;
+}
+
+.news {
+    display: flex;
+    gap: 3em;
+    padding: 5em;
+    border: 1px solid black;
+    border-radius: 0.8em;
+    position: relative;
+    margin-top: 3em;
+}
+
+
+.news :before {
+    position: absolute;
+    content: "";
+    background: url('../images/confetti.svg');
+
+    width: 100px;
+    height: 100px;
+    top: -20px;
+    left: -20px;
+    z-index: 2;
+}
+p.employees {
+    font-size: 3.3rem;
+    margin: 0;
+    font-weight: bold;
+    line-height: 100%;
+    color: #322E2D;
+}
+
+p.details {
+    font-size: 1.4rem;
+    margin: 0;
+}
+
+.right-col {
+    display: grid;
+    gap: 1em;
+    grid-template-columns: repeat(2,auto);
+    grid-template-areas: 
+    "left right"
+    "left bottom";
+}
+
+.card {
+    border-radius: 0.8em;
+    padding: 1.5em;
+    display: flex;
+    align-items: end;
+    background-size: 150%;
+    transition: background-size 800ms;
+}
+
+.card1 {
+    grid-area: left;
+    background-image: url('../images/clothing1.jpg');
+    position: relative;
+}
+.card2 {
+    grid-area: right;
+    background-image: url('../images/clothing2.jpg');
+    position: relative;
+}
+.card3 {
+    grid-area: bottom;
+    background-image: url('../images/clothing3.jpg');
+    position: relative;
+}
+
+.card-details {
+    background: white;
+    border-radius: 0.6em;
+    padding: 1em;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: transform 800ms;    
+}
+
+.card-details p {
+    font-size: 1.4rem;
+    margin: 0;
+}
+
+p.product-price {
+    font-size: 1.8rem;
+}
+
+.card-details a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.6em;
+    font-weight: bold;
+}
+
+.card1:before {
+    position: absolute;
+    content: "";
+    background: url('../images/tag.svg') no-repeat;
+    width: 100%;
+    height: 100%;
+    top: 20px;
+    left: -30px;
+    pointer-events: none;
+}
+
+nav ul li a::before {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 2px;
+    border-bottom: 2px solid rgb(150, 12, 12);
+    bottom: -3px;
+    transition: width 0.35 ease;
+
+}
+
+nav ul li a:hover::before {
+    width: 15px;
+}
+
+.primary-cta:hover {
+    background: #E2D1BD;
+}
+
+.secondary-cta:hover svg {
+    transform: translateX(30px);
+}
+
+.secondary-cta:hover {
+    text-decoration: underline;
+}
+.card:hover {
+    background-size: 160%;
+}
+.card:hover .card-details {
+    transform: translateY(-20px);
+
+}
+.overlay {
+    position: absolute;
+    z-index: 999;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    animation: reveal 1s ease-in forwards;
+    transform-origin: bottom;
+}
+@keyframes reveal {
+    from {
+        transform: scaleY(1);
+    }
+    to {
+        transform: scaleY(0);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
